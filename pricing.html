@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EcoSmart - Pricing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+  /* Header and Navigation Bar*/
+header {
+  background-color: #000;
+  color: white;
+  padding: 1em 2em;
+  position: sticky; /* Sticks to the top as user scrolls */
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.site-title {
+  font-size: 1.8em;
+  margin: 0;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 0.5em 1em;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #27ae60;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    padding: 0.8em;
+  }
+}  
+/* Main Content Styling */
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2em;
+    }
+
+    .product {
+      background: white;
+      padding: 1em;
+      margin-bottom: 2em;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 1.5em;
+    }
+
+    .product img {
+      width: 200px;
+      border-radius: 8px;
+    }
+
+    .product h2 {
+      margin: 0.3em 0;
+      color:black ;
+    }
+
+    .extras {
+      background-color: #ffffff;
+      padding: 1.5em;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 2em;
+    }
+
+    .cta {
+      text-align: center;
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #000000;
+      margin-top: 3em;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 0.7em 1.5em;
+      background-color: #27ae60;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 1em;
+    }
+/* Text Colors */
+    p{
+      color: #000 ;
+    }
+    
+    h2{
+        color:black ;
+    }
+    ul{
+        color:#000 ;
+    } 
+  </style>
+</head>
+<body>
+<!--- Header and Navigation Bar --->
+<header>
+  <div class="nav-container">
+    <h1 class="site-title">EcoSmart</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+</header>
+<!--- Main Content --->
+<div class="container">
+
+  <div class="product">
+    <img src="images/mountain_black.png" alt="Mountain Black Bottle">
+    <div>
+      <h2>Mountain Black</h2>
+      <p>Price: <strong>R200.00</strong></p>
+      <a class="button" href="features.html#mountain_black">View Features</a>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="images/eco_green.png" alt="Eco Green Bottle">
+    <div>
+      <h2>Eco Green</h2>
+      <p>Price: <strong>R200.00</strong></p>
+      <a class="button" href="features.html#eco_green">View Features</a>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="images/full_colour.png" alt="Full Colour Bottle">
+    <div>
+      <h2>Full Colour (Premium)</h2>
+      <p>Price: <strong>R290.00</strong></p>
+      <a class="button" href="features.html#full_colour">View Features</a>
+    </div>
+  </div>
+<!-- Optional Add-ons Section -->
+  <div class="extras">
+    <h2>Optional Add-ons</h2>
+    <ul>
+      <li><strong>Custom Engraving:</strong> +R100.00</li>
+      <li><strong>Gift Wrap:</strong> +R20.00</li>
+    </ul>
+  </div>
+
+  <div class="cta">
+    Hydrate sustainably, live consciously. <br>
+    <em>Make the smart choice - choose EcoSmart today!</em>
+  </div>
+
+</div>
+</body>
+</html>

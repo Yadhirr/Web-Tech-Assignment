@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EcoSmart - Features</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f0f8f5;
+      color: #333;
+    }
+
+/* === Header and Navigation bar === */
+
+header {
+  background-color: #000;
+  color: white;
+  padding: 1em 2em;
+  position: sticky; /* Sticks to the top as user scrolls */
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.site-title {
+  font-size: 1.8em;
+  margin: 0;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 0.5em 1em;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #27ae60;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    padding: 0.8em;
+  }
+}
+  
+/* === Main Section === */
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2em;
+    }
+  
+    .bottle-feature {
+      background: white;
+      padding: 1.5em;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 2em;
+    }
+
+    .bottle-feature img {
+      width: 200px;
+      border-radius: 8px;
+      float: right;
+      margin-left: 1em;
+    }
+
+    .bottle-feature h2 {
+      margin-top: 0;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 0.5em 1.2em;
+      background-color: #2980b9;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 1em;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+<!--- Header and Navigation Bar --->
+<header>
+  <div class="nav-container">
+    <h1 class="site-title">EcoSmart</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<!--- Main Content Styling --->
+<div class="container">
+
+  <div class="bottle-feature clearfix" id="mountain_black">
+    <img src="images/mountain_black.png" alt="Mountain Black">
+    <h2>Mountain Black</h2>
+    <p><strong>Features:</strong> Sleek matte finish, rugged grip, leak-proof lid.</p>
+    <p><strong>Benefits:</strong> Durable and minimalist design ideal for active lifestyles.</p>
+    <p><strong>Why Buy:</strong> For those who want style and functionality without compromise.</p>
+    <a class="button" href="pricing.html">View Pricing</a>
+  </div>
+
+  <div class="bottle-feature clearfix" id="eco_green">
+    <img src="images/eco_green.png" alt="Eco Green">
+    <h2>Eco Green</h2>
+    <p><strong>Features:</strong> Made from recycled materials, BPA-free, eco-friendly cap.</p>
+    <p><strong>Benefits:</strong> Best choice for environmentally conscious consumers.</p>
+    <p><strong>Why Buy:</strong> Help the planet and stay hydrated-responsibly.</p>
+    <a class="button" href="pricing.html">View Pricing</a>
+  </div>
+
+  <div class="bottle-feature clearfix" id="full_colour">
+    <img src="images/full_colour.png" alt="Full Colour">
+    <h2>Full Colour (Premium)</h2>
+    <p><strong>Features:</strong> Vibrant full-body wrap, glossy finish, scratch-resistant.</p>
+    <p><strong>Benefits:</strong> Stand out with bold design and premium craftsmanship.</p>
+    <p><strong>Why Buy:</strong> For those who want hydration to be expressive and stylish.</p>
+    <a class="button" href="pricing.html">View Pricing</a>
+  </div>
+
+</div>
+
+</body>
+</html>

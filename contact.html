@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - EcoSmart</title>
+  <style>
+/* === Body Styling === */
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f0f8f5;
+      color: #333;
+        }
+
+/* === Header and Navigation Bar === */
+header {
+  background-color: #000;
+  color: white;
+  padding: 1em 2em;
+  position: sticky; /* Sticks to the top as user scrolls */
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.site-title {
+  font-size: 1.8em;
+  margin: 0;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 0.5em 1em;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #27ae60;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    padding: 0.8em;
+  }
+}
+    h1 {
+      color: #ffffff;
+    }
+
+    /* === Contact Form Styling === */
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form input, form textarea {
+      margin: 0.7em 0;
+      padding: 0.8em;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    form button {
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      padding: 1em;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 6px;
+      margin-top: 1em;
+    }
+
+    form button:hover {
+      background-color: #219150;
+    }
+
+    label {
+      color: #333;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9em;
+    }
+
+    .success {
+      color: green;
+      font-size: 1em;
+      margin-top: 1em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+    
+<header>
+  <div class="nav-container">
+    <h1 class="site-title">EcoSmart</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+  <div class="container">
+    <form id="contactForm" onsubmit="return validateForm(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+      <label for="terms">
+        <input type="checkbox" id="terms" name="terms" required />
+        I agree to the Terms and Conditions
+      </label>
+
+      <div class="error" id="formError"></div>
+      <button type="submit">Send Message</button>
+
+      <div class="success" id="formSuccess"></div>
+    </form>
+  </div>
+
+  <!-- === Form Validation Script === -->
+  <script>
+    function validateForm(event) {
+      const terms = document.getElementById("terms").checked;
+      const errorDiv = document.getElementById("formError");
+      const successDiv = document.getElementById("formSuccess");
+
+      if (!terms) {
+        errorDiv.textContent = "You must agree to the Terms and Conditions.";
+        successDiv.textContent = "";
+        event.preventDefault();
+        return false;
+      }
+
+      errorDiv.textContent = "";
+      successDiv.textContent = "Message sent successfully!";
+      // Optionally, reset form after a short delay
+      setTimeout(() => {
+        document.getElementById("contactForm").reset();
+        successDiv.textContent = "";
+      }, 2000);
+  // event.preventDefault(); // Allow real submission
+  return true;
+    }
+  </script>
+
+</body>
+</html>
